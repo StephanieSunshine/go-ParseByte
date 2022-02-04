@@ -9,7 +9,7 @@
   set lookup table
 */
 
-package main
+package parse 
 
 var _parsebyte_lookup_table = map[[3]byte]byte {
   [3]byte{48}: 0,
@@ -382,7 +382,7 @@ var _parsebyte_lookup_table = map[[3]byte]byte {
   [3]byte{48, 57, 57}: 99,
 }
 
-func ParseByte(input []byte) byte {
+func Byte(input []byte) byte {
   var lookup [3]byte
   var input_length = len(input)
   if input_length > 3 {
